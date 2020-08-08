@@ -1,4 +1,4 @@
-import React, { Fragment } from "react"
+import React, { Fragment, useEffect } from "react"
 import BootstrapLogo from "../assets/bootstrap.svg"
 import CSSLogo from "../assets/css-3.svg"
 import GatsbyLogo from "../assets/gatsby.svg"
@@ -6,15 +6,20 @@ import GitLogo from "../assets/git-icon.svg"
 import HTMLLogo from "../assets/html-5.svg"
 import JavascriptLogo from "../assets/javascript.svg"
 import NodeLogo from "../assets/nodejs.svg"
-// import ReactLogo from "../assets/react.svg"
+import ReactLogo from "../assets/icons8-react.svg"
 import SassLogo from "../assets/sass.svg"
+import Aos from "aos"
+import "aos/dist/aos.css"
 
 const Skills = () => {
+  useEffect(() => {
+    Aos.init({ duration: 1000 })
+  })
+
   return (
     <Fragment>
-      <div className="skills-container">
+      <div data-aos="fade-up" className="skills-container">
         <h4>Skills</h4>
-
         <div className="icon-container">
           <a>
             <HTMLLogo />
@@ -27,6 +32,10 @@ const Skills = () => {
           <a>
             <JavascriptLogo />
             <p>ES6</p>
+          </a>
+          <a>
+            <ReactLogo />
+            <p>React</p>
           </a>
           <a>
             <GitLogo />
@@ -49,8 +58,6 @@ const Skills = () => {
             <BootstrapLogo />
             <p>Bootstrap</p>
           </a>
-
-          {/* <ReactLogo /> */}
         </div>
       </div>
     </Fragment>

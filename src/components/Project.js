@@ -1,13 +1,20 @@
-import React from "react"
+import React, { useEffect } from "react"
 import PropTypes from "prop-types"
 import Image from "gatsby-image"
-import { FaGithubSquare, FaShareSquare } from "react-icons/fa"
+import GithubIcon from "../assets/github.svg"
+import ExternalLinkIcon from "../assets/external-link.svg"
+import Aos from "aos"
+import "aos/dist/aos.css"
+
 const Project = ({ description, title, github, stack, url, image, index }) => {
+  useEffect(() => {
+    Aos.init({ duration: 1000 })
+  })
+
   return (
-    <article className="project">
+    <article data-aos="fade-right" className="project">
       <Image fluid={image.childImageSharp.fluid} className="project-img" />
       <div className="project-info">
-        <span className="project-number">0{index + 1}.</span>
         <h3>{title}</h3>
         <p className="project-desc">{description}</p>
         <div className="project-stack">
@@ -17,10 +24,10 @@ const Project = ({ description, title, github, stack, url, image, index }) => {
         </div>
         <div className="project-links">
           <a href={github}>
-            <FaGithubSquare className="project-icon" />
+            <GithubIcon />
           </a>
           <a href={github}>
-            <FaShareSquare className="project-icon" />
+            <ExternalLinkIcon />
           </a>
         </div>
       </div>

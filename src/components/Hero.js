@@ -9,6 +9,7 @@ import animation from "../animations/computer-animation.json"
 import FacebookIcon from "../assets/facebook.svg"
 import InstagramIcon from "../assets/instagram.svg"
 import GithubIcon from "../assets/github.svg"
+import LinkedInIcon from "../assets/linkedin.svg"
 // ...GatsbyImageSharpFluid
 const query = graphql`
   {
@@ -55,9 +56,27 @@ const Hero = () => {
           </p>
         </div>
         <div className="hero-social-media-icons">
-          <FacebookIcon />
-          <InstagramIcon />
-          <GithubIcon />
+          <a
+            href="https://www.facebook.com/david.han.520/"
+            className="social-media-icon"
+          >
+            <FacebookIcon />
+          </a>
+          <a
+            href="https://www.instagram.com/davidhan92/"
+            className="social-media-icon"
+          >
+            <InstagramIcon />
+          </a>
+          <a href="https://github.com/davidhannn" className="social-media-icon">
+            <GithubIcon />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/david-han-21b856b5/"
+            className="social-media-icon"
+          >
+            <LinkedInIcon />
+          </a>
         </div>
       </div>
       <div className="hero-main-right">

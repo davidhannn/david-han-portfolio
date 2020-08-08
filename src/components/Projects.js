@@ -1,21 +1,22 @@
-import React from "react"
-import Title from "./Title"
+import React, { useEffect } from "react"
 import Project from "./Project"
-import { Link } from "gatsby"
-const Projects = ({ projects, title, showLink }) => {
+
+import Aos from "aos"
+import "aos/dist/aos.css"
+
+const Projects = ({ projects, showLink }) => {
+  useEffect(() => {
+    Aos.init({ duration: 1000 })
+  })
+
   return (
-    <section className="section projects">
-      <Title title={title} />
+    <section className="section-projects">
+      <h4 data-aos="fade-up">Projects</h4>
       <div className="section-center projects-center">
         {projects.map((project, index) => {
           return <Project key={project.id} index={index} {...project} />
         })}
       </div>
-      {showLink && (
-        <Link to="/projects" className="btn center-btn">
-          projects
-        </Link>
-      )}
     </section>
   )
 }

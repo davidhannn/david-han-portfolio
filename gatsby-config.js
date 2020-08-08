@@ -6,12 +6,12 @@
 
 module.exports = {
   siteMetadata: {
-    title: "WebDev Portfolio",
-    description: "This is WebDev Portfolio Site",
-    author: "@webdev",
-    twitterUsername: "@john_smilga",
-    image: "/twitter-img.png",
-    siteUrl: "https://testing-strapi-gatsby-build.netlify.app",
+    title: "David Han Portfolio",
+    description: "This is David Han's Portfolio",
+    author: "@Davidhannn",
+    twitterUsername: "@davidhannn",
+    image: "/twitter-img.jpg",
+    siteUrl: "https://davidhanportfolio.netlify.app",
   },
   plugins: [
     `gatsby-transformer-sharp`,
@@ -19,6 +19,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-smoothscroll`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -33,7 +34,7 @@ module.exports = {
         queryLimit: 1000, // Default to 100
         // contentTypes: [`jobs`, `projects`, `blogs`, ],
         //singleTypes:[`about` ]
-        contentTypes: [`jobs`, `projects`, `skills`],
+        contentTypes: [`projects`, `skills`],
         singleTypes: [],
       },
     },
@@ -41,9 +42,9 @@ module.exports = {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /assets/ // See below to configure properly
-        }
-      }
+          include: /assets/, // See below to configure properly
+        },
+      },
     },
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
