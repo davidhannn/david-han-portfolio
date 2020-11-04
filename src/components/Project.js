@@ -26,7 +26,7 @@ const Project = ({ description, title, github, stack, url, image, index }) => {
           <a href={github}>
             <GithubIcon />
           </a>
-          <a href={github}>
+          <a href={url}>
             <ExternalLinkIcon />
           </a>
         </div>
