@@ -1,3 +1,5 @@
 David Han's Portfolio
 
-Created my portfolio site with GatsbyJs
+Created utilizing GatsbyJs and Strapi
+
+
